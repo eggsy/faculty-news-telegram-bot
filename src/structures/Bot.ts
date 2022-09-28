@@ -2,6 +2,7 @@ import TelegramBot from "node-telegram-bot-api";
 import config from "../config";
 import { readdirSync } from "fs";
 import { join } from "path";
+import dotenv from "dotenv";
 
 // Types
 import { CommandExecute, Command } from "../@types/command";
@@ -9,7 +10,10 @@ import { CommandExecute, Command } from "../@types/command";
 // Handlers
 import { messageHandler } from "../handlers/message";
 
-const bot = new TelegramBot(config.BOT_TOKEN, {
+dotenv.config();
+if (!process.env.BOT_TOKEN) throw new Error("BOT_TOKEN is not defined.");
+
+const bot = new TelegramBot(process.env.BOT_TOKEN, {
   polling: true,
 });
 
