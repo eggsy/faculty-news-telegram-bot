@@ -14,16 +14,19 @@ export interface NewsOrAnnouncements {
   type?: "news" | "announcement";
 }
 
-const init = async () => {
-  createDirectoryAndFile();
-};
-
-cron.schedule("*/30 * * * *", async () => {
+const fetchContent = async () => {
   console.info("[CRON] Fetching news...");
 
   const news = await fetchNews();
   const announcemenets = await fetchAnnouncements();
   await compareFiles([...news, ...announcemenets]);
-});
+};
+
+cron.schedule("*/30 * * * *", fetchContent);
+
+const init = async () => {
+  createDirectoryAndFile();
+  fetchContent();
+};
 
 init();
