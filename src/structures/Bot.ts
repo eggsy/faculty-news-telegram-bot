@@ -9,7 +9,7 @@ import { CommandExecute, Command } from "../@types/command";
 // Handlers
 import { messageHandler } from "../handlers/message";
 
-dotenv.config();
+dotenv.config({ path: join(process.cwd(), ".env.local") });
 if (!process.env.BOT_TOKEN) throw new Error("BOT_TOKEN is not defined.");
 
 const bot = new TelegramBot(process.env.BOT_TOKEN, {
