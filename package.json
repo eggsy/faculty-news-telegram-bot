@@ -1,0 +1,23 @@
+{
+  "name": "maun-egitim-news",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "node-cron": "^3.0.2",
+    "node-html-parser": "^6.1.1",
+    "node-telegram-bot-api": "^0.59.0",
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/node-cron": "^3.0.4",
+    "@types/node-telegram-bot-api": "^0.57.1"
+  }
+}
