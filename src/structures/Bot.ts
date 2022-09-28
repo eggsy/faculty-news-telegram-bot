@@ -1,5 +1,4 @@
 import TelegramBot from "node-telegram-bot-api";
-import config from "../config";
 import { readdirSync } from "fs";
 import { join } from "path";
 import dotenv from "dotenv";
