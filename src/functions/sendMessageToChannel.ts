@@ -1,5 +1,5 @@
 import bot from "../structures/Bot";
-import config from "src/config";
+import config from "../config";
 import {
   SendMessageOptions,
   InlineKeyboardButton,
@@ -16,7 +16,6 @@ export const sendMessageToChannel = (
   const optionsObject: SendMessageToChannelOptions = {
     ...options,
     parse_mode: "Markdown",
-    disable_notification: true,
   } as SendMessageToChannelOptions;
 
   if (options?.keyboards)
@@ -24,5 +23,5 @@ export const sendMessageToChannel = (
       inline_keyboard: options.keyboards.map((item) => [item]),
     };
 
-  bot.sendMessage(config.CHANNEL_ID, content, optionsObject);
+  return bot.sendMessage(config.CHANNEL_ID, content, optionsObject);
 };
