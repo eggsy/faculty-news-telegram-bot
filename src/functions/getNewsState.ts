@@ -1,9 +1,8 @@
-import axios from "axios";
+import { NewsOrAnnouncements } from "../@types/news";
+import { hop } from "../hop";
 
 export const getNewsState = async () => {
-  return axios("https://api.hop.io/v1/channels/maun-news/state", {
-    headers: {
-      Authorization: `${process.env.HOP_TOKEN}`,
-    },
-  });
+  return (await hop.channels.get("maun-news")).state as {
+    news: NewsOrAnnouncements[];
+  };
 };

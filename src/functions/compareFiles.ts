@@ -10,12 +10,10 @@ import { getNewsState } from "./getNewsState";
 
 export const compareFiles = async (news: NewsOrAnnouncements[]) => {
   const result = await getNewsState();
-
-  if (result.status !== 200 || result.data.success === false)
-    throw new Error("Failed connection to Hop Console.");
+  if (!result.news) return;
 
   const newNews = news.filter((item) => {
-    return !result.data.data.state.news.find(
+    return !result.news.find(
       (localItem: NewsOrAnnouncements) =>
         localItem.link === item.link || localItem.title === item.title
     );

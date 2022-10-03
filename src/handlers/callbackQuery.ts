@@ -12,15 +12,14 @@ import { getNewsState } from "../functions/getNewsState";
 
 export const callbackQueryHandler = async (data: CallbackQuery) => {
   if (data.message?.chat.id !== Number(config.MANAGER_GROUP_ID)) return;
-  else if (!data.data) return;
 
   const newsResponse = await getNewsState();
-  if (newsResponse.status !== 200) return;
 
-  const newsData: NewsOrAnnouncements =
-    newsResponse.data.data?.state?.news.find(
-      (item: NewsOrAnnouncements) => item.link === data.data
-    );
+  if (!newsResponse.news) return;
+
+  const newsData: NewsOrAnnouncements | undefined = newsResponse.news.find(
+    (item: NewsOrAnnouncements) => item.link === data.data
+  );
 
   if (!newsData) {
     bot.answerCallbackQuery(data.id, {
