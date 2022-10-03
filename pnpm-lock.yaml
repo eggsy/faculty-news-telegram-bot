@@ -6,7 +6,7 @@ specifiers:
   '@types/node-cron': ^3.0.4
   '@types/node-telegram-bot-api': ^0.57.1
   axios: ^0.27.2
-  dotenv: ^16.0.2
+  dotenv: ^16.0.3
   node-cron: ^3.0.2
   node-html-parser: ^6.1.1
   node-telegram-bot-api: ^0.59.0
@@ -16,7 +16,7 @@ specifiers:
 dependencies:
   '@onehop/js': 1.9.1
   axios: 0.27.2
-  dotenv: 16.0.2
+  dotenv: 16.0.3
   node-cron: 3.0.2
   node-html-parser: 6.1.1
   node-telegram-bot-api: 0.59.0
@@ -317,8 +317,8 @@ packages:
       domhandler: 5.0.3
     dev: false
 
-  /dotenv/16.0.2:
-    resolution: {integrity: sha512-JvpYKUmzQhYoIFgK2MOnF3bciIZoItIIoryihy0rIA+H4Jy0FmgyKYAHCTN98P5ybGSJcIFbh6QKeJdtZd1qhA==}
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
     engines: {node: '>=12'}
     dev: false
 
