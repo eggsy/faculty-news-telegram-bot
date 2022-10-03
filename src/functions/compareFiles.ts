@@ -1,49 +1,40 @@
-import config from "../config";
-import bot from "../structures/Bot";
-import { readFileSync } from "fs";
+import consola from "consola";
 
 // Types
-import type { NewsOrAnnouncements } from "../main";
+import type { NewsOrAnnouncements } from "../@types/news";
 
 // Functions
-import { updateLocalFile } from "./updateLocalFile";
+import { updateCloudRecords } from "./updateCloudRecords";
+import { sendForApproval } from "./sendForApproval";
+import { getNewsState } from "./getNewsState";
 
 export const compareFiles = async (news: NewsOrAnnouncements[]) => {
-  const localNews: NewsOrAnnouncements[] =
-    JSON.parse(readFileSync(`cache/news.json`).toString()) || [];
+  const result = await getNewsState();
+
+  if (result.status !== 200 || result.data.success === false)
+    throw new Error("Failed connection to Hop Console.");
 
   const newNews = news.filter((item) => {
-    return !localNews.find(
-      (localItem: NewsOrAnnouncements) => localItem.link === item.link
+    return !result.data.data.state.news.find(
+      (localItem: NewsOrAnnouncements) =>
+        localItem.link === item.link || localItem.title === item.title
     );
   });
 
   if (newNews.length <= 0) return;
 
-  await updateLocalFile(news);
+  consola.info(
+    `[COMPARE] Found ${newNews.length} news, updating the DB and posting for approval.`
+  );
+
+  await updateCloudRecords(news);
 
   for (const item of newNews) {
-    bot.sendMessage(
-      config.CHANNEL_ID,
+    sendForApproval(
       `${item.type === "announcement" ? "📢" : "📰"} *${item.title}* - ${
         item.date
       }\n\n${item.description}`,
-      {
-        parse_mode: "Markdown",
-        disable_notification: true,
-        reply_markup: {
-          inline_keyboard: [
-            [
-              {
-                text: "Devamını Oku",
-                url: item.link,
-              },
-            ],
-          ],
-        },
-      }
+      item.link
     );
   }
-
-  return false;
 };
