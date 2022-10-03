@@ -23,7 +23,7 @@ export const execute: CommandExecute = async (message) => {
     await bot.editMessageText(
       news
         .map(
-          (item) => `📢 *${item.title}* (${item.date}) - [Oku](${item.link})`
+          (item) => `📰 *${item.title}* (${item.date}) - [Oku](${item.link})`
         )
         .join("\n\n"),
       {
