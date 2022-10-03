@@ -1,18 +1,17 @@
 import cron from "node-cron";
-import { compareFiles } from "./functions/compareFiles";
+import { config as loadEnv } from "dotenv";
+import { join } from "path";
+import { APIAuthentication, Hop } from "@onehop/js";
+
+loadEnv({
+  path: join(process.cwd(), ".env.local"),
+});
 
 // Functions
 import { createDirectoryAndFile } from "./functions/createDirectoryAndFile";
 import { fetchAnnouncements } from "./functions/fetchAnnouncements";
+import { compareFiles } from "./functions/compareFiles";
 import { fetchNews } from "./functions/fetchNews";
-
-export interface NewsOrAnnouncements {
-  title: string;
-  description: string;
-  link: string;
-  date: string;
-  type?: "news" | "announcement";
-}
 
 const fetchContent = async () => {
   console.info("[CRON] Fetching news...");
@@ -28,5 +27,8 @@ const init = async () => {
   createDirectoryAndFile();
   fetchContent();
 };
+
+const HopToken = process.env.HOP_TOKEN as APIAuthentication;
+export const hop = new Hop(HopToken);
 
 init();
