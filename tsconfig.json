@@ -1,24 +1,23 @@
 {
   "compilerOptions": {
-    "rootDir": "./",
-    "target": "ES2015",
+    "baseUrl": ".",
+    "rootDir": "./src",
+    "target": "ESNext",
     "module": "CommonJS",
     "lib": ["esnext", "dom"],
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "outDir": "dist"
-  }
+    "outDir": "dist",
+    "typeRoots": ["src/@types"]
+  },
+  "include": ["src/**/*"]
 }
