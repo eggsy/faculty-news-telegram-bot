@@ -3,11 +3,11 @@
   "scripts": {
     "dev": "nodemon ./src/main.ts",
     "build": "tsc",
-    "start": "node ./dist/src/main.js"
+    "start": "node ./dist/main.js"
   },
   "dependencies": {
-    "@onehop/js": "^1.9.1",
     "axios": "^0.27.2",
+    "consola": "^2.15.3",
     "dotenv": "^16.0.3",
     "node-cron": "^3.0.2",
     "node-html-parser": "^6.1.1",
