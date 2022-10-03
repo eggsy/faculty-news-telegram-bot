@@ -5,7 +5,7 @@ import consola from "consola";
 import cron from "node-cron";
 
 loadEnv({
-  path: join(process.cwd(), ".env.local"),
+	path: join(process.cwd(), ".env.local"),
 });
 
 // Functions
@@ -14,18 +14,18 @@ import { compareFiles } from "./functions/compareFiles";
 import { fetchNews } from "./functions/fetchNews";
 
 const fetchContent = async () => {
-  consola.info("[CRON] Fetching news...");
+	consola.info("[CRON] Fetching news...");
 
-  const news = await fetchNews();
-  const announcemenets = await fetchAnnouncements();
+	const news = await fetchNews();
+	const announcemenets = await fetchAnnouncements();
 
-  await compareFiles([...news, ...announcemenets]);
+	await compareFiles([...news, ...announcemenets]);
 };
 
 cron.schedule("*/30 * * * *", fetchContent);
 
 const init = async () => {
-  fetchContent();
+	fetchContent();
 };
 
 init();
