@@ -16,7 +16,8 @@ __Faydalı Bağlantılar:__
 🔗 [Fakülte Websitesi](https://egitimf.alparslan.edu.tr)
 💌 [Fakülte İletişim](http://egitimf.alparslan.edu.tr/tr/contact)
 ✨ [Fakülte Instagram](https://instagram.com/maunegitim)
-📅 [Akademik Takvim](https://www.alparslan.edu.tr/documents/1653573643.pdf)`,
+📅 [Akademik Takvim](https://www.alparslan.edu.tr/documents/1653573643.pdf)
+🤓 [Bot Yapımcısı](https://eggsy.xyz)`,
     {
       parse_mode: "Markdown",
       disable_web_page_preview: true,
