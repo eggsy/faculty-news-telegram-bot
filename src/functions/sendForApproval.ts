@@ -22,3 +22,24 @@ export const sendForApproval = (content: string, newsId: string) => {
     },
   });
 };
+
+export const sendImageForApproval = (
+  content: string,
+  image: string,
+  link: string
+) => {
+  return bot.sendPhoto(config.MANAGER_GROUP_ID, image, {
+    caption: content,
+    parse_mode: "Markdown",
+    reply_markup: {
+      inline_keyboard: [
+        [
+          {
+            text: "👀 İncele",
+            url: link,
+          },
+        ],
+      ],
+    },
+  });
+};
