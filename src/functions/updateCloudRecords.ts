@@ -1,6 +1,12 @@
 import { hop } from "../hop";
-import type { NewsOrAnnouncements } from "../@types/news";
 
-export const updateCloudRecords = async (news: NewsOrAnnouncements[]) => {
-  await hop.channels.setState("maun-news", { news });
+// Types
+import type { NewsOrAnnouncements } from "../@types/news";
+import type { IEvent } from "src/@types/events";
+
+export const updateCloudRecords = async (
+  news: NewsOrAnnouncements[] = [],
+  events: IEvent[] = []
+) => {
+  await hop.channels.setState("maun-news", { news, events });
 };
