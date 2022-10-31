@@ -1,4 +1,4 @@
-import { commands } from "../structures/Bot";
+import { commands } from "../bot";
 
 // Types
 import type { Message } from "node-telegram-bot-api";

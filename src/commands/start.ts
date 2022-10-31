@@ -1,4 +1,4 @@
-import bot from "../structures/Bot";
+import { bot } from "../bot";
 
 // Types
 import type { CommandExecute, CommandMeta } from "../@types/command";
