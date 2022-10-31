@@ -24,10 +24,9 @@ const fetchContent = async () => {
   await compareFiles([...news, ...announcemenets], events);
 };
 
-cron.schedule("*/30 * * * *", fetchContent);
-
-const init = async () => {
-  fetchContent();
+const init = () => {
+  fetchContent().catch(consola.error);
+  cron.schedule("*/30 * * * *", fetchContent);
 };
 
 init();
