@@ -17,11 +17,11 @@ export const bot = new TelegramBot(process.env.BOT_TOKEN, {
 
 export const commands: Map<string, CommandExecute> = new Map();
 
-const files = readdirSync(join(__dirname, "../commands"));
+const files = readdirSync(join(__dirname, "./commands"));
 const botCommands = [];
 
 for (const file of files) {
-  const cmd = require(join(__dirname, `../commands/${file}`)) as Command;
+  const cmd = require(join(__dirname, `./commands/${file}`)) as Command;
 
   if (!cmd.meta.hidden)
     botCommands.push({
