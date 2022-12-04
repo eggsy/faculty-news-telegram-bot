@@ -6,7 +6,7 @@ export interface CommandMeta {
   hidden?: boolean;
 }
 
-export type CommandExecute = (message: Message) => void;
+export type CommandExecute = (message: Message, ...args: any) => void;
 
 export interface Command {
   meta: CommandMeta;
