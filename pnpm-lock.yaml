@@ -1,39 +1,41 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@onehop/js': 1.9.2
-  '@types/node': ^18.8.0
-  '@types/node-cron': ^3.0.4
-  '@types/node-telegram-bot-api': ^0.57.1
-  axios: ^0.27.2
+  '@onehop/js': 1.14.0
+  '@types/node': ^18.11.10
+  '@types/node-cron': ^3.0.6
+  '@types/node-telegram-bot-api': ^0.57.6
+  axios: ^1.2.0
   consola: ^2.15.3
   dotenv: ^16.0.3
+  moment: ^2.29.4
   node-cron: ^3.0.2
-  node-html-parser: ^6.1.1
-  node-telegram-bot-api: ^0.59.0
+  node-html-parser: ^6.1.4
+  node-telegram-bot-api: ^0.60.0
   nodemon: ^2.0.20
-  typescript: ^4.8.4
+  typescript: ^4.9.3
 
 dependencies:
-  '@onehop/js': 1.9.2
-  axios: 0.27.2
+  '@onehop/js': 1.14.0
+  axios: 1.2.0
   consola: 2.15.3
   dotenv: 16.0.3
+  moment: 2.29.4
   node-cron: 3.0.2
-  node-html-parser: 6.1.1
-  node-telegram-bot-api: 0.59.0
+  node-html-parser: 6.1.4
+  node-telegram-bot-api: 0.60.0
   nodemon: 2.0.20
-  typescript: 4.8.4
+  typescript: 4.9.3
 
 devDependencies:
-  '@types/node': 18.8.0
-  '@types/node-cron': 3.0.4
-  '@types/node-telegram-bot-api': 0.57.1
+  '@types/node': 18.11.10
+  '@types/node-cron': 3.0.6
+  '@types/node-telegram-bot-api': 0.57.6
 
 packages:
 
-  /@onehop/js/1.9.2:
-    resolution: {integrity: sha512-giGtfTr9G3kgD98ncMaDRMrNjUGnkvXB/qRn1A/cWhfzZkvUmV+R0NHQPvcQojicJCKwXKlsYO1HnetxQiEsjQ==}
+  /@onehop/js/1.14.0:
+    resolution: {integrity: sha512-hvTixolhQ/29+5I6CFx5GH4xYA0ekE3z2jJMLB+qpaWVDCsIf3WHqM9KmhLV+FwKksZ0QvMFc/Df4WA5t1FYFg==}
     dependencies:
       '@onehop/json-methods': 1.2.0
       cross-fetch: 3.1.5
@@ -50,26 +52,26 @@ packages:
     resolution: {integrity: sha512-6ckxMjBBD8URvjB6J3NcnuAn5Pkl7t3TizAg+xdlzzQGSPSmBcXf8KoIH0ua/i+tio+ZRUHEXp0HEmvaR4kt0w==}
     dev: true
 
-  /@types/node-cron/3.0.4:
-    resolution: {integrity: sha512-A2H+uz5ry4hohYjRe5mQSE/8Dx/HGw4WZ728JxhKUZ7z8CMvRuG2tpbzGHRGQCuQzz5aCNB1iXzPZYHd4BPHvw==}
+  /@types/node-cron/3.0.6:
+    resolution: {integrity: sha512-Qu9dpjkgj2JmzRmDMVzpt2dFKuJ7wma0mxEvbbgomwkhAdHKT2LpSLYHawzd9OeeP4HsyhmcV9o/xLgJyPNcgw==}
     dev: true
 
-  /@types/node-telegram-bot-api/0.57.1:
-    resolution: {integrity: sha512-6jzAtxFPnCcnTLFw6UaCs3552eiC46krxH7KTZl0aJ1gB5A5z3oiaqrY3ZO9/A5qpVA6bZoU/QmriZ37JXsePw==}
+  /@types/node-telegram-bot-api/0.57.6:
+    resolution: {integrity: sha512-hN1Ad4EntuTFZjKfRgfv8812RUk3dBRXUBH8D3NWws3t3U4J0Bep9l6hI+GYxL9B49E1Wd+mhJv85ducpjFVKQ==}
     dependencies:
-      '@types/node': 18.8.0
+      '@types/node': 18.11.10
       '@types/request': 2.48.8
     dev: true
 
-  /@types/node/18.8.0:
-    resolution: {integrity: sha512-u+h43R6U8xXDt2vzUaVP3VwjjLyOJk6uEciZS8OSyziUQGOwmk+l+4drxcsDboHXwyTaqS1INebghmWMRxq3LA==}
+  /@types/node/18.11.10:
+    resolution: {integrity: sha512-juG3RWMBOqcOuXC643OAdSA525V44cVgGV6dUDuiFtss+8Fk5x1hI93Rsld43VeJVIeqlP9I7Fn9/qaVqoEAuQ==}
     dev: true
 
   /@types/request/2.48.8:
     resolution: {integrity: sha512-whjk1EDJPcAR2kYHRbFl/lKeeKYTi05A15K9bnLInCVroNDCtXce57xKdI0/rQaA3K+6q0eFyUBPmqfSndUZdQ==}
     dependencies:
       '@types/caseless': 0.12.2
-      '@types/node': 18.8.0
+      '@types/node': 18.11.10
       '@types/tough-cookie': 4.0.2
       form-data: 2.5.1
     dev: true
@@ -130,11 +132,12 @@ packages:
     resolution: {integrity: sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==}
     dev: false
 
-  /axios/0.27.2:
-    resolution: {integrity: sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==}
+  /axios/1.2.0:
+    resolution: {integrity: sha512-zT7wZyNYu3N5Bu0wuZ6QccIf93Qk1eV8LOewxgjOZFd2DenOs98cJ7+Y6703d0wkaXGY6/nZd4EweJaHz9uzQw==}
     dependencies:
       follow-redirects: 1.15.2
       form-data: 4.0.0
+      proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
     dev: false
@@ -759,6 +762,10 @@ packages:
       brace-expansion: 1.1.11
     dev: false
 
+  /moment/2.29.4:
+    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
+    dev: false
+
   /ms/2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: false
@@ -782,15 +789,15 @@ packages:
       whatwg-url: 5.0.0
     dev: false
 
-  /node-html-parser/6.1.1:
-    resolution: {integrity: sha512-eYYblUeoMg0nR6cYGM4GRb1XncNa9FXEftuKAU1qyMIr6rXVtNyUKduvzZtkqFqSHVByq2lLjC7WO8tz7VDmnA==}
+  /node-html-parser/6.1.4:
+    resolution: {integrity: sha512-3muP9Uy/Pz7bQa9TNYVQzWJhNZMqyCx7xJle8kz2/y1UgzAUyXXShc1IcPaJy6u07CE3K5rQcRwlvHzmlySRjg==}
     dependencies:
       css-select: 5.1.0
       he: 1.2.0
     dev: false
 
-  /node-telegram-bot-api/0.59.0:
-    resolution: {integrity: sha512-APQ7qf4KDrVWuvsstGnuhoC44HoCw+SnoCsnCtwRPdb6/FzQmACNySG1I6VWZG7itYAGntQK299fDiylF222GA==}
+  /node-telegram-bot-api/0.60.0:
+    resolution: {integrity: sha512-SBI2PjfCAfMVuieQb95GBvaWiprRdk5SKfzX6B6G2ciG7J4SjOVwaMvaYhm9dJDTqvRSzl5pbioGbqRO/vx1Zg==}
     engines: {node: '>=0.12'}
     dependencies:
       array.prototype.findindex: 2.2.0
@@ -881,6 +888,10 @@ packages:
 
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
+    dev: false
+
+  /proxy-from-env/1.1.0:
+    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
     dev: false
 
   /psl/1.9.0:
@@ -1118,8 +1129,8 @@ packages:
     resolution: {integrity: sha512-KXXFFdAbFXY4geFIwoyNK+f5Z1b7swfXABfL7HXCmoIWMKU3dmS26672A4EeQtDzLKy7SXmfBu51JolvEKwtGA==}
     dev: false
 
-  /typescript/4.8.4:
-    resolution: {integrity: sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==}
+  /typescript/4.9.3:
+    resolution: {integrity: sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: false

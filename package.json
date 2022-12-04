@@ -6,19 +6,20 @@
     "start": "node ./dist/main.js"
   },
   "dependencies": {
-    "@onehop/js": "1.9.2",
-    "axios": "^0.27.2",
+    "@onehop/js": "1.14.0",
+    "axios": "^1.2.0",
     "consola": "^2.15.3",
     "dotenv": "^16.0.3",
+    "moment": "^2.29.4",
     "node-cron": "^3.0.2",
-    "node-html-parser": "^6.1.1",
-    "node-telegram-bot-api": "^0.59.0",
+    "node-html-parser": "^6.1.4",
+    "node-telegram-bot-api": "^0.60.0",
     "nodemon": "^2.0.20",
-    "typescript": "^4.8.4"
+    "typescript": "^4.9.3"
   },
   "devDependencies": {
-    "@types/node": "^18.8.0",
-    "@types/node-cron": "^3.0.4",
-    "@types/node-telegram-bot-api": "^0.57.1"
+    "@types/node": "^18.11.10",
+    "@types/node-cron": "^3.0.6",
+    "@types/node-telegram-bot-api": "^0.57.6"
   }
 }
