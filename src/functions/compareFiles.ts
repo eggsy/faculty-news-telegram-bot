@@ -14,7 +14,7 @@ export const compareFiles = async (
   events: IEvent[]
 ) => {
   const result = await getNewsState();
-  if (!result.news) return;
+  if (!result.news && !result.events) return;
 
   const newNews = news.filter((item) => {
     return !result.news.find(
