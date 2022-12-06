@@ -2,7 +2,7 @@ import consola from "consola";
 
 // Types
 import type { NewsOrAnnouncements } from "../@types/news";
-import type { IEvent } from "src/@types/events";
+import type { IEvent } from "../@types/events";
 
 // Functions
 import { updateCloudRecords } from "./updateCloudRecords";

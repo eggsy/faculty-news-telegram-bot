@@ -2,7 +2,7 @@ import { hop } from "../hop";
 
 // Types
 import type { NewsOrAnnouncements } from "../@types/news";
-import type { IEvent } from "src/@types/events";
+import type { IEvent } from "../@types/events";
 
 export const updateCloudRecords = async (
   news: NewsOrAnnouncements[] = [],
