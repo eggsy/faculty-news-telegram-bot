@@ -16,7 +16,7 @@ const token =
 
 if (!token) throw new Error("BOT_TOKEN or BOT_TOKEN_DEV is not defined.");
 
-export const bot = new TelegramBot(process.env.BOT_TOKEN, {
+export const bot = new TelegramBot(token, {
   polling: true,
 });
 
