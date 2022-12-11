@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "nodemon ./src/main.ts",
-    "build": "tsc",
+    "build": "cross-env NODE_ENV=production tsc",
     "start": "cross-env NODE_ENV=production node ./dist/main.js"
   },
   "dependencies": {
