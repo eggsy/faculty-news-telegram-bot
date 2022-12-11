@@ -9,7 +9,12 @@ import { CommandExecute, Command } from "./@types/command";
 import { messageHandler } from "./handlers/message";
 import { callbackQueryHandler } from "./handlers/callbackQuery";
 
-if (!process.env.BOT_TOKEN) throw new Error("BOT_TOKEN is not defined.");
+const token =
+  process.env.NODE_ENV === "production"
+    ? process.env.BOT_TOKEN
+    : process.env.BOT_TOKEN_DEV;
+
+if (!token) throw new Error("BOT_TOKEN or BOT_TOKEN_DEV is not defined.");
 
 export const bot = new TelegramBot(process.env.BOT_TOKEN, {
   polling: true,
