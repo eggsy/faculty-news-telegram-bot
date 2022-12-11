@@ -27,14 +27,22 @@ const botCommands = [];
 
 for (const file of files) {
   const cmd = require(join(__dirname, `./commands/${file}`)) as Command;
+  const commandName =
+    typeof cmd.meta.command === "object"
+      ? cmd.meta.command[0]
+      : cmd.meta.command;
 
   if (!cmd.meta.hidden)
     botCommands.push({
-      command: cmd.meta.command,
+      command: commandName,
       description: cmd.meta.description,
     });
 
-  commands.set(cmd.meta.command, cmd.execute);
+  if (typeof cmd.meta.command === "object") {
+    for (const command of cmd.meta.command) {
+      commands.set(command, cmd.execute);
+    }
+  } else commands.set(cmd.meta.command, cmd.execute);
 }
 
 bot.setMyCommands(botCommands);

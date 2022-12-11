@@ -1,7 +1,7 @@
 import { Message } from "node-telegram-bot-api";
 
 export interface CommandMeta {
-  command: string;
+  command: string | string[];
   description: string;
   hidden?: boolean;
 }
