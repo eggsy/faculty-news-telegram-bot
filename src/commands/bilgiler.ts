@@ -26,6 +26,6 @@ __Faydalı Bağlantılar:__
 };
 
 export const meta: CommandMeta = {
-  command: "bilgiler",
+  command: ["bilgiler", "bilgi"],
   description: "Fakültemiz hakkında bilgileri gösterir.",
 };

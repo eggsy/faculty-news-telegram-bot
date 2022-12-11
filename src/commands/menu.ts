@@ -33,7 +33,7 @@ export const execute: CommandExecute = async (message) => {
 
   await bot.sendMessage(
     message.chat.id,
-    `📅 Hangi günün menüsüne bakmak istersiniz?`,
+    `📅 Hangi günün yemek menüsüne bakmak istersiniz?`,
     {
       parse_mode: "Markdown",
       disable_notification: true,
@@ -55,6 +55,6 @@ export const execute: CommandExecute = async (message) => {
 };
 
 export const meta: CommandMeta = {
-  command: "menu",
+  command: ["menu", "yemek", "yemekmenu"],
   description: "Yemek menüsünü gönderir.",
 };
