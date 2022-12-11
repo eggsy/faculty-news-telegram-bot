@@ -42,21 +42,23 @@ export const callbackQueryHandler = async (data: CallbackQuery) => {
           callback_data: `menu_${nextDayMenu.date}`,
         });
 
-      await bot.editMessageText(
-        `📅 *${menuDate} ${getDayName(menuDate)}*\n\n${foundMenu.menu
-          .map((item, index) => `${getEmojiFromIndex(index)} ${item}`)
-          .join("\n")}`,
-        {
-          chat_id: data.message.chat.id,
-          message_id: data.message.message_id,
-          parse_mode: "Markdown",
-          reply_markup: {
-            inline_keyboard: buttons,
-          },
-        }
-      );
+      try {
+        await bot.editMessageText(
+          `📅 *${menuDate} ${getDayName(menuDate)}*\n\n${foundMenu.menu
+            .map((item, index) => `${getEmojiFromIndex(index)} ${item}`)
+            .join("\n")}`,
+          {
+            chat_id: data.message.chat.id,
+            message_id: data.message.message_id,
+            parse_mode: "Markdown",
+            reply_markup: {
+              inline_keyboard: buttons,
+            },
+          }
+        );
 
-      bot.answerCallbackQuery(data.id);
+        bot.answerCallbackQuery(data.id);
+      } catch (err) {}
     } else {
       await bot.editMessageText("Seçtiğiniz tarihe ait bir menü bulunamadı.", {
         chat_id: data.message.chat.id,
