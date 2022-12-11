@@ -4,14 +4,32 @@ import moment from "moment";
 
 // Types
 import type { CommandExecute, CommandMeta } from "../@types/command";
+import type { InlineKeyboardButton } from "node-telegram-bot-api";
 
 export const execute: CommandExecute = async (message) => {
-  const tomorrowDate = moment().add(1, "days").format("DD.MM.YYYY");
+  const todayDate = moment();
+  const tomorrowDate = moment().add(1, "days");
+
   const tomorrowIndex = menuByDate.findIndex(
-    (item) => item.date === tomorrowDate
+    (item) => item.date === tomorrowDate.format("DD.MM.YYYY")
   );
 
   const nextThreeDays = menuByDate.slice(tomorrowIndex, tomorrowIndex + 3);
+  const initialButtons: InlineKeyboardButton[] = [];
+
+  if (![6, 7].includes(todayDate.isoWeekday())) {
+    initialButtons.push({
+      text: "▶️ Bugün",
+      callback_data: `menu_${todayDate.format("DD.MM.YYYY")}`,
+    });
+  }
+
+  if (![6, 7].includes(tomorrowDate.isoWeekday())) {
+    initialButtons.push({
+      text: "⏩ Yarın",
+      callback_data: `menu_${tomorrowDate.format("DD.MM.YYYY")}`,
+    });
+  }
 
   await bot.sendMessage(
     message.chat.id,
@@ -23,16 +41,7 @@ export const execute: CommandExecute = async (message) => {
         resize_keyboard: true,
         one_time_keyboard: true,
         inline_keyboard: [
-          [
-            {
-              text: "▶️ Bugün",
-              callback_data: `menu_${moment().format("DD.MM.YYYY")}`,
-            },
-            {
-              text: "⏩ Yarın",
-              callback_data: `menu_${tomorrowDate}`,
-            },
-          ],
+          [...initialButtons],
           [
             ...nextThreeDays.map((item) => ({
               text: item.date,
