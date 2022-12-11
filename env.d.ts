@@ -3,6 +3,7 @@ declare global {
     interface ProcessEnv {
       BOT_TOKEN: string;
       HOP_TOKEN: string;
+      NODE_ENV: "production" | "development";
     }
   }
 }
