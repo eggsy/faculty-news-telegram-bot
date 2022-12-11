@@ -14,8 +14,13 @@ export const execute: CommandExecute = async (message) => {
     (item) => item.date === tomorrowDate.format("DD.MM.YYYY")
   );
 
-  const nextThreeDays = menuByDate.slice(tomorrowIndex, tomorrowIndex + 3);
   const initialButtons: InlineKeyboardButton[] = [];
+
+  const closestDaysToTomorrow = menuByDate
+    .slice(tomorrowIndex + 1, tomorrowIndex + 8)
+    .filter(
+      (item) => ![6, 7].includes(moment(item.date, "DD.MM.YYYY").isoWeekday())
+    );
 
   if (![6, 7].includes(todayDate.isoWeekday())) {
     initialButtons.push({
@@ -43,7 +48,7 @@ export const execute: CommandExecute = async (message) => {
         inline_keyboard: [
           [...initialButtons],
           [
-            ...nextThreeDays.map((item) => ({
+            ...closestDaysToTomorrow.slice(0, 3).map((item) => ({
               text: item.date,
               callback_data: `menu_${item.date}`,
             })),
