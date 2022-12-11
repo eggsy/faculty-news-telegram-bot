@@ -1,11 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@onehop/js': 1.14.0
-  '@types/node': ^18.11.10
+  '@onehop/js': 1.16.0
+  '@types/node': ^18.11.13
   '@types/node-cron': ^3.0.6
   '@types/node-telegram-bot-api': ^0.57.6
-  axios: ^1.2.0
+  axios: ^1.2.1
   consola: ^2.15.3
   cross-env: ^7.0.3
   dotenv: ^16.0.3
@@ -14,11 +14,11 @@ specifiers:
   node-html-parser: ^6.1.4
   node-telegram-bot-api: ^0.60.0
   nodemon: ^2.0.20
-  typescript: ^4.9.3
+  typescript: ^4.9.4
 
 dependencies:
-  '@onehop/js': 1.14.0
-  axios: 1.2.0
+  '@onehop/js': 1.16.0
+  axios: 1.2.1
   consola: 2.15.3
   dotenv: 16.0.3
   moment: 2.29.4
@@ -28,16 +28,16 @@ dependencies:
   nodemon: 2.0.20
 
 devDependencies:
-  '@types/node': 18.11.10
+  '@types/node': 18.11.13
   '@types/node-cron': 3.0.6
   '@types/node-telegram-bot-api': 0.57.6
   cross-env: 7.0.3
-  typescript: 4.9.3
+  typescript: 4.9.4
 
 packages:
 
-  /@onehop/js/1.14.0:
-    resolution: {integrity: sha512-hvTixolhQ/29+5I6CFx5GH4xYA0ekE3z2jJMLB+qpaWVDCsIf3WHqM9KmhLV+FwKksZ0QvMFc/Df4WA5t1FYFg==}
+  /@onehop/js/1.16.0:
+    resolution: {integrity: sha512-FMgSdE7l7PQYUjL+DDENGA72tSMlQ/mOGrWZPqKuf/GiQnrh2nutx7KLEAVBUO3u9PP1Dn8f8/YRfNw2tdOgaQ==}
     dependencies:
       '@onehop/json-methods': 1.2.0
       cross-fetch: 3.1.5
@@ -61,19 +61,19 @@ packages:
   /@types/node-telegram-bot-api/0.57.6:
     resolution: {integrity: sha512-hN1Ad4EntuTFZjKfRgfv8812RUk3dBRXUBH8D3NWws3t3U4J0Bep9l6hI+GYxL9B49E1Wd+mhJv85ducpjFVKQ==}
     dependencies:
-      '@types/node': 18.11.10
+      '@types/node': 18.11.13
       '@types/request': 2.48.8
     dev: true
 
-  /@types/node/18.11.10:
-    resolution: {integrity: sha512-juG3RWMBOqcOuXC643OAdSA525V44cVgGV6dUDuiFtss+8Fk5x1hI93Rsld43VeJVIeqlP9I7Fn9/qaVqoEAuQ==}
+  /@types/node/18.11.13:
+    resolution: {integrity: sha512-IASpMGVcWpUsx5xBOrxMj7Bl8lqfuTY7FKAnPmu5cHkfQVWF8GulWS1jbRqA934qZL35xh5xN/+Xe/i26Bod4w==}
     dev: true
 
   /@types/request/2.48.8:
     resolution: {integrity: sha512-whjk1EDJPcAR2kYHRbFl/lKeeKYTi05A15K9bnLInCVroNDCtXce57xKdI0/rQaA3K+6q0eFyUBPmqfSndUZdQ==}
     dependencies:
       '@types/caseless': 0.12.2
-      '@types/node': 18.11.10
+      '@types/node': 18.11.13
       '@types/tough-cookie': 4.0.2
       form-data: 2.5.1
     dev: true
@@ -134,8 +134,8 @@ packages:
     resolution: {integrity: sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==}
     dev: false
 
-  /axios/1.2.0:
-    resolution: {integrity: sha512-zT7wZyNYu3N5Bu0wuZ6QccIf93Qk1eV8LOewxgjOZFd2DenOs98cJ7+Y6703d0wkaXGY6/nZd4EweJaHz9uzQw==}
+  /axios/1.2.1:
+    resolution: {integrity: sha512-I88cFiGu9ryt/tfVEi4kX2SITsvDddTajXTOFmt2uK1ZVA8LytjtdeyefdQWEf5PU8w+4SSJDoYnggflB5tW4A==}
     dependencies:
       follow-redirects: 1.15.2
       form-data: 4.0.0
@@ -1169,8 +1169,8 @@ packages:
     resolution: {integrity: sha512-KXXFFdAbFXY4geFIwoyNK+f5Z1b7swfXABfL7HXCmoIWMKU3dmS26672A4EeQtDzLKy7SXmfBu51JolvEKwtGA==}
     dev: false
 
-  /typescript/4.9.3:
-    resolution: {integrity: sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==}
+  /typescript/4.9.4:
+    resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
