@@ -10,26 +10,50 @@ export const execute: CommandExecute = async (message) => {
   const todayDate = moment();
   const tomorrowDate = moment().add(1, "days");
 
+  const todayIndex = menuByDate.findIndex(
+    (item) => item.date === todayDate.format("DD.MM.YYYY")
+  );
   const tomorrowIndex = menuByDate.findIndex(
     (item) => item.date === tomorrowDate.format("DD.MM.YYYY")
   );
 
+  let nextDayIndex = tomorrowIndex;
+
+  if (tomorrowIndex === -1) {
+    const laterDay = tomorrowDate.add(1, "days");
+
+    nextDayIndex = menuByDate.findIndex(
+      (item) => item.date === laterDay.format("DD.MM.YYYY")
+    );
+  }
+
+  if (nextDayIndex === -1) {
+    const laterDay = tomorrowDate.add(2, "days");
+
+    nextDayIndex = menuByDate.findIndex(
+      (item) => item.date === laterDay.format("DD.MM.YYYY")
+    );
+  }
+
   const initialButtons: InlineKeyboardButton[] = [];
 
   const closestDaysToTomorrow = menuByDate
-    .slice(tomorrowIndex + 1, tomorrowIndex + 8)
+    .slice(
+      tomorrowIndex !== -1 ? nextDayIndex + 1 : nextDayIndex,
+      nextDayIndex + 8
+    )
     .filter(
       (item) => ![6, 7].includes(moment(item.date, "DD.MM.YYYY").isoWeekday())
     );
 
-  if (![6, 7].includes(todayDate.isoWeekday())) {
+  if (todayIndex !== -1 && ![6, 7].includes(todayDate.isoWeekday())) {
     initialButtons.push({
       text: "▶️ Bugün",
       callback_data: `menu_${todayDate.format("DD.MM.YYYY")}`,
     });
   }
 
-  if (![6, 7].includes(tomorrowDate.isoWeekday())) {
+  if (tomorrowIndex !== -1 && ![6, 7].includes(tomorrowDate.isoWeekday())) {
     initialButtons.push({
       text: "⏩ Yarın",
       callback_data: `menu_${tomorrowDate.format("DD.MM.YYYY")}`,
