@@ -12,9 +12,9 @@ A 🇹🇷 Turkish bot that has some cool commands such as `yemek`, `iban`, `bil
 
 <table>
    <thead>
-    <th><img height="350px" alt="image" src="https://user-images.githubusercontent.com/13917975/207046579-4f2582b8-9023-43e0-89fe-07f562317bb0.png"></th>
-    <th><img height="350px" alt="image" src="https://user-images.githubusercontent.com/13917975/207046750-8e78b3e1-58d2-4e95-a2f0-884b7dfd7924.png"></th>
-    <th><img width="414" alt="image" src="https://user-images.githubusercontent.com/13917975/207047819-f8197ef4-8540-436f-8106-d18318e5e818.png"></th>
+    <th><img height="250px" alt="image" src="https://user-images.githubusercontent.com/13917975/207048244-c203862b-83e2-4a44-b8e4-c2e7dcaa206a.png" /></th>
+    <th><img height="250px" alt="image" src="https://user-images.githubusercontent.com/13917975/207048459-1ef85cb9-accc-4346-b49c-c3be45f98e8b.png"></th>
+    <th><img height="250px" alt="image" src="https://user-images.githubusercontent.com/13917975/207048532-abd0ce1c-4da9-4a7e-99c0-5249885adedc.png"></th>
   </thead>
 </table>
 
