@@ -32,4 +32,4 @@ A 🇹🇷 Turkish bot that has some cool commands such as `yemek`, `iban`, `bil
 
 ## License
 
-[MIT License](https://github.com/eggsy/maun-egitim-bot/blob/main/LICENSE) © Abdulbaki "EGGSY" Dursun
+[MIT License](https://github.com/eggsy/faculty-news-telegram-bot/blob/main/LICENSE) © Abdulbaki "EGGSY" Dursun
