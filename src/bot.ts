@@ -6,8 +6,8 @@ import { join } from "path";
 import { CommandExecute, Command } from "./@types/command";
 
 // Handlers
-import { messageHandler } from "./handlers/message";
-import { callbackQueryHandler } from "./handlers/callbackQuery";
+import { messageHandler } from "./events/message";
+import { callbackQueryHandler } from "./events/callbackQuery";
 
 const token =
   process.env.NODE_ENV === "production"
