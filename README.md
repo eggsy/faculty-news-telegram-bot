@@ -10,22 +10,13 @@ A 🇹🇷 Turkish bot that has some cool commands such as `yemek`, `iban`, `bil
 
 ## Previews
 
-  <tbody>
-    <tr>
-      <td>
-        <img width="414" alt="image" src="https://user-images.githubusercontent.com/13917975/207046579-4f2582b8-9023-43e0-89fe-07f562317bb0.png">
-      </td>
-      <td>
-        <img width="414" alt="image" src="https://user-images.githubusercontent.com/13917975/207046750-8e78b3e1-58d2-4e95-a2f0-884b7dfd7924.png">
-      </td>
-    </tr>
-  </tbody>
+<table>
+   <thead>
+    <th><img height="350px" alt="image" src="https://user-images.githubusercontent.com/13917975/207046579-4f2582b8-9023-43e0-89fe-07f562317bb0.png"></th>
+    <th><img height="350px" alt="image" src="https://user-images.githubusercontent.com/13917975/207046750-8e78b3e1-58d2-4e95-a2f0-884b7dfd7924.png"></th>
+    <th><img width="414" alt="image" src="https://user-images.githubusercontent.com/13917975/207047819-f8197ef4-8540-436f-8106-d18318e5e818.png"></th>
+  </thead>
 </table>
-
-## License
-
-<img width="414" alt="image" src="https://user-images.githubusercontent.com/13917975/207046324-46fed128-2039-4111-99f6-7e7866a035d2.png">
-
 
 ## Try it Out
 
