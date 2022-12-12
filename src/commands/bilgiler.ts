@@ -27,5 +27,5 @@ __Faydalı Bağlantılar:__
 
 export const meta: CommandMeta = {
   command: ["bilgiler", "bilgi"],
-  description: "Fakültemiz hakkında bilgileri gösterir.",
+  description: "Fakülte ve bot hakkında bilgiler",
 };

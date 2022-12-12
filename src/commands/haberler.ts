@@ -57,5 +57,5 @@ export const execute: CommandExecute = async (message) => {
 
 export const meta: CommandMeta = {
   command: "haberler",
-  description: "Eğitim fakültesinin sitesindeki son haberleri gönderir.",
+  description: "Son haberleri gönderir.",
 };

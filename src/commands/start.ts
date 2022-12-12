@@ -12,6 +12,6 @@ export const execute: CommandExecute = async (message) => {
 
 export const meta: CommandMeta = {
   command: ["start", "merhaba"],
-  description: "Botun merhaba mesajı.",
+  description: "Merhaba mesajı",
   hidden: true,
 };
