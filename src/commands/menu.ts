@@ -77,6 +77,12 @@ export const execute: CommandExecute = async (message) => {
               callback_data: `menu_${item.date}`,
             })),
           ],
+          [
+            {
+              text: "💳 Karta Para Yükle (IBAN)",
+              callback_data: "yemek_iban",
+            },
+          ],
         ],
       },
     }
