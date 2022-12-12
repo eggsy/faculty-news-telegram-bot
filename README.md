@@ -22,7 +22,7 @@ A 🇹🇷 Turkish bot that has some cool commands such as `yemek`, `iban`, `bil
 
 [Click here to try the bot out](https://t.me/maun_egitim_bot).
 
-### 💖 Sponsors
+## 💖 Sponsors
 
 <p align="center">
   <a href="https://github.com/sponsors/eggsy">
@@ -30,6 +30,6 @@ A 🇹🇷 Turkish bot that has some cool commands such as `yemek`, `iban`, `bil
   </a>
 </p>
 
-### License
+## License
 
 [MIT License](https://github.com/eggsy/maun-egitim-bot/blob/main/LICENSE) © Abdulbaki "EGGSY" Dursun
