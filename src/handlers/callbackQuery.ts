@@ -16,6 +16,56 @@ import { getNewsState } from "../functions/getNewsState";
 import { getDayName } from "../functions/getDayName";
 
 export const callbackQueryHandler = async (data: CallbackQuery) => {
+  if (["yemek_iban", "yemek_iban_only"].includes(data.data)) {
+    if (data.data === "yemek_iban")
+      await bot
+        .editMessageText(
+          `🏷️ *Alıcı:* Muş Alparslan Üniversitesi\n🏦 *Banka:* TC Ziraat Bankası (Muş Şubesi)\n📝 *IBAN*: ${config.YEMEK_IBAN}\n\n☎️ *Hata & Görüş:* sks@alparslan.edu.tr\n⚠️ *Dikkat*: Kendinize ait olmayan bir karttan para gönderirken açıklamaya TC kimlik numaranızı girmeyi unutmayın.`,
+          {
+            chat_id: data.message.chat.id,
+            message_id: data.message.message_id,
+            parse_mode: "Markdown",
+            reply_markup: {
+              inline_keyboard: [
+                [
+                  {
+                    text: "✅ Sadece IBAN'ı Göster",
+                    callback_data: "yemek_iban_only",
+                  },
+                ],
+                [
+                  {
+                    text: "💳 Bakiye Sorgu",
+                    url: "http://hesap.alparslan.edu.tr//hesap.aspx",
+                  },
+                ],
+              ],
+            },
+          }
+        )
+        .catch(() => {});
+    else if (data.data === "yemek_iban_only")
+      await bot
+        .editMessageText(config.YEMEK_IBAN, {
+          chat_id: data.message.chat.id,
+          message_id: data.message.message_id,
+          reply_markup: {
+            inline_keyboard: [
+              [
+                {
+                  text: "◀️ Diğer Bilgileri Göster",
+                  callback_data: "yemek_iban",
+                },
+              ],
+            ],
+          },
+        })
+        .catch(() => {});
+
+    bot.answerCallbackQuery(data.id);
+    return;
+  }
+
   if (data.data.startsWith("menu_")) {
     const menuDate = data.data.split("_")[1];
     const foundMenu = menuByDate.find((item) => item.date === menuDate);
@@ -42,8 +92,8 @@ export const callbackQueryHandler = async (data: CallbackQuery) => {
           callback_data: `menu_${nextDayMenu.date}`,
         });
 
-      try {
-        await bot.editMessageText(
+      await bot
+        .editMessageText(
           `📅 *${menuDate} ${getDayName(menuDate)}*\n\n${foundMenu.menu
             .map((item, index) => `${getEmojiFromIndex(index)} ${item}`)
             .join("\n")}`,
@@ -55,10 +105,10 @@ export const callbackQueryHandler = async (data: CallbackQuery) => {
               inline_keyboard: buttons,
             },
           }
-        );
+        )
+        .catch(() => {});
 
-        bot.answerCallbackQuery(data.id);
-      } catch (err) {}
+      bot.answerCallbackQuery(data.id);
     } else {
       await bot.editMessageText("Seçtiğiniz tarihe ait bir menü bulunamadı.", {
         chat_id: data.message.chat.id,
