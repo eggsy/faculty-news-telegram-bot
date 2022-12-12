@@ -90,6 +90,6 @@ export const execute: CommandExecute = async (message) => {
 };
 
 export const meta: CommandMeta = {
-  command: ["menu", "yemek", "yemekmenu"],
+  command: ["yemek", "menu", "yemekmenu"],
   description: "Yemek menüsünü gönderir.",
 };
