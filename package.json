@@ -11,7 +11,6 @@
     "consola": "^3.2.3",
     "date-fns": "^2.30.0",
     "dotenv": "^16.3.1",
-    "moment": "^2.29.4",
     "node-cron": "^3.0.2",
     "node-html-parser": "^6.1.10",
     "node-telegram-bot-api": "^0.63.0",
@@ -22,6 +21,7 @@
     "@types/node-cron": "^3.0.9",
     "@types/node-telegram-bot-api": "^0.61.8",
     "cross-env": "^7.0.3",
+    "tsup": "^7.2.0",
     "typescript": "^5.2.2"
   }
 }
