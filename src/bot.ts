@@ -3,11 +3,11 @@ import { readdirSync } from "fs";
 import { join } from "path";
 
 // Types
-import { CommandExecute, Command } from "./@types/command";
+import { CommandExecute, Command } from "@/@types/command";
 
 // Handlers
-import { messageHandler } from "./events/message";
-import { callbackQueryHandler } from "./events/callbackQuery";
+import { messageHandler } from "@/events/message";
+import { callbackQueryHandler } from "@/events/callbackQuery";
 
 const token =
   process.env.NODE_ENV === "production"

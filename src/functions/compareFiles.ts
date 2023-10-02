@@ -5,9 +5,12 @@ import type { NewsOrAnnouncements } from "@/@types/news";
 import type { IEvent } from "@/@types/events";
 
 // Functions
-import { updateCloudRecords } from "./updateCloudRecords";
-import { sendForApproval, sendImageForApproval } from "./sendForApproval";
-import { getNewsState } from "./getNewsState";
+import { updateCloudRecords } from "@/functions/updateCloudRecords";
+import { getNewsState } from "@/functions/getNewsState";
+import {
+  sendForApproval,
+  sendImageForApproval,
+} from "@/functions/sendForApproval";
 
 export const compareFiles = async (
   news: NewsOrAnnouncements[],
