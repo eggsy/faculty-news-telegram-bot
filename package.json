@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
   "scripts": {
-    "dev": "nodemon ./src/main.ts",
-    "build": "cross-env NODE_ENV=production tsc",
+    "dev": "tsx watch ./src/main.ts",
+    "build": "cross-env NODE_ENV=production tsup",
     "start": "cross-env NODE_ENV=production node ./dist/main.js"
   },
   "dependencies": {
@@ -14,7 +14,7 @@
     "node-cron": "^3.0.2",
     "node-html-parser": "^6.1.10",
     "node-telegram-bot-api": "^0.63.0",
-    "nodemon": "^3.0.1"
+    "tsx": "^3.13.0"
   },
   "devDependencies": {
     "@types/node": "^20.8.0",
