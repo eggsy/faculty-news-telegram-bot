@@ -6,21 +6,22 @@
     "start": "cross-env NODE_ENV=production node ./dist/main.js"
   },
   "dependencies": {
-    "@onehop/js": "1.17.0",
-    "axios": "^1.2.2",
-    "consola": "^2.15.3",
-    "dotenv": "^16.0.3",
+    "@onehop/js": "1.38.0",
+    "axios": "^1.5.1",
+    "consola": "^3.2.3",
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.3.1",
     "moment": "^2.29.4",
     "node-cron": "^3.0.2",
-    "node-html-parser": "^6.1.4",
-    "node-telegram-bot-api": "^0.60.0",
-    "nodemon": "^2.0.20"
+    "node-html-parser": "^6.1.10",
+    "node-telegram-bot-api": "^0.63.0",
+    "nodemon": "^3.0.1"
   },
   "devDependencies": {
-    "@types/node": "^18.11.18",
-    "@types/node-cron": "^3.0.7",
-    "@types/node-telegram-bot-api": "^0.57.6",
+    "@types/node": "^20.8.0",
+    "@types/node-cron": "^3.0.9",
+    "@types/node-telegram-bot-api": "^0.61.8",
     "cross-env": "^7.0.3",
-    "typescript": "^4.9.4"
+    "typescript": "^5.2.2"
   }
 }
