@@ -1,11 +1,11 @@
-import { bot } from "../bot";
+import { bot } from "@/bot";
 
 // Types
-import type { CommandExecute, CommandMeta } from "../@types/command";
+import type { CommandExecute, CommandMeta } from "@/@types/command";
 import type { InlineKeyboardButton } from "node-telegram-bot-api";
 
 // Functions
-import { fetchAnnouncements } from "../functions/fetchAnnouncements";
+import { fetchAnnouncements } from "@/functions/fetchAnnouncements";
 
 export const execute: CommandExecute = async (message) => {
   const msg = await bot.sendMessage(

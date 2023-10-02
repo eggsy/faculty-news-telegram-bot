@@ -2,7 +2,7 @@ import axios from "axios";
 import parse from "node-html-parser";
 
 // Types
-import type { NewsOrAnnouncements } from "../@types/news";
+import type { NewsOrAnnouncements } from "@/@types/news";
 
 const PAGE_URL = "http://egitimf.alparslan.edu.tr/tr/news-all";
 

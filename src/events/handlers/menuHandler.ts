@@ -1,8 +1,8 @@
-import { bot } from "../../bot";
-import menuByDate from "../../data/menuByDate";
+import { bot } from "@/bot";
+import menuByDate from "@/data/menuByDate";
 
 // Functions
-import { getDayName } from "../../functions/getDayName";
+import { getDayName } from "@/functions/getDayName";
 
 // Types
 import type {

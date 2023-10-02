@@ -1,37 +1,44 @@
-import { bot } from "../bot";
-import menuByDate from "../data/menuByDate";
-import moment from "moment";
+import { bot } from "@/bot";
+import menuByDate from "@/data/menuByDate";
+import {
+  startOfToday,
+  startOfTomorrow,
+  format,
+  addDays,
+  getWeek,
+  parse,
+} from "date-fns";
 
 // Types
-import type { CommandExecute, CommandMeta } from "../@types/command";
+import type { CommandExecute, CommandMeta } from "@/@types/command";
 import type { InlineKeyboardButton } from "node-telegram-bot-api";
 
 export const execute: CommandExecute = async (message) => {
-  const todayDate = moment();
-  const tomorrowDate = moment().add(1, "days");
+  const todayDate = startOfToday();
+  const tomorrowDate = startOfTomorrow();
+
+  const formattedTodayDate = format(todayDate, "dd.MM.yyyy");
+  const formattedTomorrowDate = format(tomorrowDate, "dd.MM.yyyy");
 
   const todayIndex = menuByDate.findIndex(
-    (item) => item.date === todayDate.format("DD.MM.YYYY")
+    (item) => item.date === formattedTodayDate
   );
+
   const tomorrowIndex = menuByDate.findIndex(
-    (item) => item.date === tomorrowDate.format("DD.MM.YYYY")
+    (item) => item.date === formattedTomorrowDate
   );
 
   let nextDayIndex = tomorrowIndex;
 
   if (tomorrowIndex === -1) {
-    const laterDay = tomorrowDate.add(1, "days");
-
     nextDayIndex = menuByDate.findIndex(
-      (item) => item.date === laterDay.format("DD.MM.YYYY")
+      (item) => item.date === format(addDays(tomorrowDate, 1), "dd.MM.yyyy")
     );
   }
 
   if (nextDayIndex === -1) {
-    const laterDay = tomorrowDate.add(2, "days");
-
     nextDayIndex = menuByDate.findIndex(
-      (item) => item.date === laterDay.format("DD.MM.YYYY")
+      (item) => item.date === format(addDays(tomorrowDate, 2), "dd.MM.yyyy")
     );
   }
 
@@ -43,20 +50,21 @@ export const execute: CommandExecute = async (message) => {
       nextDayIndex + 8
     )
     .filter(
-      (item) => ![6, 7].includes(moment(item.date, "DD.MM.YYYY").isoWeekday())
+      (item) =>
+        ![6, 7].includes(getWeek(parse(item.date, "dd.MM.yyyy", new Date())))
     );
 
-  if (todayIndex !== -1 && ![6, 7].includes(todayDate.isoWeekday())) {
+  if (todayIndex !== -1 && ![6, 7].includes(getWeek(todayDate))) {
     initialButtons.push({
       text: "▶️ Bugün",
-      callback_data: `menu_${todayDate.format("DD.MM.YYYY")}`,
+      callback_data: `menu_${formattedTodayDate}`,
     });
   }
 
-  if (tomorrowIndex !== -1 && ![6, 7].includes(tomorrowDate.isoWeekday())) {
+  if (tomorrowIndex !== -1 && ![6, 7].includes(getWeek(tomorrowDate))) {
     initialButtons.push({
       text: "⏩ Yarın",
-      callback_data: `menu_${tomorrowDate.format("DD.MM.YYYY")}`,
+      callback_data: `menu_${formattedTomorrowDate}`,
     });
   }
 

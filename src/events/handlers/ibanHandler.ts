@@ -1,5 +1,5 @@
-import { bot } from "../../bot";
-import config from "../../config";
+import { bot } from "@/bot";
+import config from "@/config";
 
 // Types
 import type { CallbackQuery } from "node-telegram-bot-api";

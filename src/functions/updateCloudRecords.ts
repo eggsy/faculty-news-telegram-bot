@@ -1,8 +1,8 @@
-import { hop } from "../hop";
+import { hop } from "@/hop";
 
 // Types
-import type { NewsOrAnnouncements } from "../@types/news";
-import type { IEvent } from "../@types/events";
+import type { NewsOrAnnouncements } from "@/@types/news";
+import type { IEvent } from "@/@types/events";
 
 export const updateCloudRecords = async (
   news: NewsOrAnnouncements[] = [],

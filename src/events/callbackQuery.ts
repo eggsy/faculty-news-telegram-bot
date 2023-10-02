@@ -1,14 +1,14 @@
-import { bot } from "../bot";
-import config from "../config";
+import { bot } from "@/bot";
+import config from "@/config";
 
 // Types
-import type { NewsOrAnnouncements } from "../@types/news";
+import type { NewsOrAnnouncements } from "@/@types/news";
 import type { CallbackQuery } from "node-telegram-bot-api";
 
 // Functions
-import { sendMessageToChannel } from "../functions/sendMessageToChannel";
-import { getCurrentTime } from "../functions/getCurrentTime";
-import { getNewsState } from "../functions/getNewsState";
+import { sendMessageToChannel } from "@/functions/sendMessageToChannel";
+import { getCurrentTime } from "@/functions/getCurrentTime";
+import { getNewsState } from "@/functions/getNewsState";
 
 // Handlers
 import { ibanHandler } from "./handlers/ibanHandler";

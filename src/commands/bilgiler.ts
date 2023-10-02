@@ -1,7 +1,7 @@
-import { bot } from "../bot";
+import { bot } from "@/bot";
 
 // Types
-import { CommandExecute, CommandMeta } from "../@types/command";
+import { CommandExecute, CommandMeta } from "@/@types/command";
 
 export const execute: CommandExecute = (message) => {
   bot.sendMessage(

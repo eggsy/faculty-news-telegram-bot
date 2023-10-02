@@ -1,8 +1,8 @@
-import { bot } from "../bot";
-import config from "../config";
+import { bot } from "@/bot";
+import config from "@/config";
 
 // Types
-import type { CommandExecute, CommandMeta } from "../@types/command";
+import type { CommandExecute, CommandMeta } from "@/@types/command";
 
 export const execute: CommandExecute = async (message) => {
   bot.sendMessage(message.chat.id, config.YEMEK_IBAN);

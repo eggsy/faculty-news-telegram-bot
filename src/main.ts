@@ -9,10 +9,10 @@ loadEnv({
 });
 
 // Functions
-import { fetchAnnouncements } from "./functions/fetchAnnouncements";
-import { compareFiles } from "./functions/compareFiles";
-import { fetchNews } from "./functions/fetchNews";
-import { fetchEvents } from "./functions/fetchEvents";
+import { fetchAnnouncements } from "@/functions/fetchAnnouncements";
+import { compareFiles } from "@/functions/compareFiles";
+import { fetchNews } from "@/functions/fetchNews";
+import { fetchEvents } from "@/functions/fetchEvents";
 
 const fetchContent = async () => {
   consola.info("[CRON] Fetching news, announcements and events...");

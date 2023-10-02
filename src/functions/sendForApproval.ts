@@ -1,5 +1,5 @@
-import { bot } from "../bot";
-import config from "../config";
+import { bot } from "@/bot";
+import config from "@/config";
 
 export const sendForApproval = (content: string, newsId: string) => {
   return bot.sendMessage(config.MANAGER_GROUP_ID, content, {
