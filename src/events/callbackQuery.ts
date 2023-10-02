@@ -11,19 +11,20 @@ import { getCurrentTime } from "@/functions/getCurrentTime";
 import { getNewsState } from "@/functions/getNewsState";
 
 // Handlers
-import { ibanHandler } from "./handlers/ibanHandler";
-import { menuHandler } from "./handlers/menuHandler";
+import { ibanHandler } from "@/events/handlers/ibanHandler";
+import { menuHandler } from "@/events/handlers/menuHandler";
+import { dormitoryHandler } from "@/events/handlers/dormitoryHandler";
 
 export const callbackQueryHandler = async (data: CallbackQuery) => {
-  /* Yemek IBAN handler */
+  /* Custom handlers */
   if (["yemek_iban", "yemek_iban_only"].includes(data.data)) {
     ibanHandler(data);
     return;
-  }
-
-  /* Menu command handler */
-  if (data.data.startsWith("menu_")) {
+  } else if (data.data.startsWith("menu_")) {
     menuHandler(data);
+    return;
+  } else if (data.data.startsWith("yurt_")) {
+    dormitoryHandler(data);
     return;
   }
 
