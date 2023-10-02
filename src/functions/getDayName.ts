@@ -1,9 +1,6 @@
-import moment from "moment";
-moment.locale("tr");
+import { format, parse } from "date-fns";
+import tr from "date-fns/locale/tr";
 
 export const getDayName = (day: string) => {
-  const dayToDate = moment(day, "DD.MM.YYYY");
-  const dayName = dayToDate.format("dddd");
-
-  return dayName;
+  return format(parse(day, "dd.MM.yyyy", new Date()), "EEEE", { locale: tr });
 };
