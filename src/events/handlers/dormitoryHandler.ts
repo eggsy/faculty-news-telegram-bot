@@ -16,20 +16,6 @@ export const dormitoryHandler = async (data: CallbackQuery) => {
           chat_id: data.message.chat.id,
           message_id: data.message.message_id,
           parse_mode: "Markdown",
-          reply_markup: {
-            inline_keyboard: [
-              [
-                {
-                  text: "🐣 Kahvaltı Menüsü",
-                  url: "",
-                },
-                {
-                  text: "🍕 Yemek Menüsü",
-                  url: "",
-                },
-              ],
-            ],
-          },
         }
       )
       .catch(() => {});
