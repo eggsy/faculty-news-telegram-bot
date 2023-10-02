@@ -1,6 +1,6 @@
 import { config as loadEnv } from "dotenv";
 import consola from "consola";
-import cron from "node-cron";
+import { schedule } from "node-cron";
 
 // Functions
 import { fetchAnnouncements } from "@/functions/fetchAnnouncements";
@@ -22,7 +22,7 @@ const fetchContent = async () => {
 
 const init = () => {
   fetchContent().catch(consola.error);
-  cron.schedule("*/30 * * * *", fetchContent);
+  schedule("*/30 * * * *", fetchContent);
 };
 
 init();
