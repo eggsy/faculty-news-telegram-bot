@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "tsx watch ./src/main.ts",
-    "build": "cross-env NODE_ENV=production tsup",
+    "build": "cross-env NODE_ENV=production tsc && tsc-alias",
     "start": "cross-env NODE_ENV=production node ./dist/main.js"
   },
   "dependencies": {
@@ -21,7 +21,7 @@
     "@types/node-cron": "^3.0.9",
     "@types/node-telegram-bot-api": "^0.61.8",
     "cross-env": "^7.0.3",
-    "tsup": "^7.2.0",
+    "tsc-alias": "^1.8.8",
     "typescript": "^5.2.2"
   }
 }
