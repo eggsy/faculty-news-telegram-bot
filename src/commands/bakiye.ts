@@ -1,10 +1,10 @@
 import { bot } from "@/bot";
 import { parse as parseDate } from "date-fns";
 import parse from "node-html-parser";
+import axios from "axios";
 
 // Types
 import { CommandExecute, CommandMeta } from "@/@types/command";
-import axios from "axios";
 
 const PAGE_URL = "http://hesap.alparslan.edu.tr//hesap.aspx";
 
