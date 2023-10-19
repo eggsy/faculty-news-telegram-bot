@@ -2,7 +2,7 @@ import { bot } from "@/bot";
 import config from "@/config";
 
 // Types
-import type { NewsOrAnnouncements } from "@/@types/news";
+import type { NewsOrAnnouncements } from "@/types/news";
 import type { CallbackQuery } from "node-telegram-bot-api";
 
 // Functions

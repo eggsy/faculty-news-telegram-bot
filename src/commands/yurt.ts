@@ -2,7 +2,7 @@ import { bot } from "@/bot";
 import dormitories from "@/data/dormitories";
 
 // Types
-import type { CommandExecute, CommandMeta } from "@/@types/command";
+import type { CommandExecute, CommandMeta } from "@/types/command";
 
 export const execute: CommandExecute = async (message) => {
   await bot.sendMessage(

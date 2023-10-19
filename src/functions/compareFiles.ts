@@ -1,8 +1,8 @@
 import consola from "consola";
 
 // Types
-import type { NewsOrAnnouncements } from "@/@types/news";
-import type { IEvent } from "@/@types/events";
+import type { NewsOrAnnouncements } from "@/types/news";
+import type { IEvent } from "@/types/events";
 
 // Functions
 import { updateCloudRecords } from "@/functions/updateCloudRecords";

@@ -1,7 +1,7 @@
 import { bot } from "@/bot";
 
 // Types
-import type { CommandExecute, CommandMeta } from "@/@types/command";
+import type { CommandExecute, CommandMeta } from "@/types/command";
 
 export const execute: CommandExecute = async (message) => {
   bot.sendMessage(

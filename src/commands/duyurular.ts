@@ -1,7 +1,7 @@
 import { bot } from "@/bot";
 
 // Types
-import type { CommandExecute, CommandMeta } from "@/@types/command";
+import type { CommandExecute, CommandMeta } from "@/types/command";
 import type { InlineKeyboardButton } from "node-telegram-bot-api";
 
 // Functions

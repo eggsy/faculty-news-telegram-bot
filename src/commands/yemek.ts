@@ -10,7 +10,7 @@ import {
 } from "date-fns";
 
 // Types
-import type { CommandExecute, CommandMeta } from "@/@types/command";
+import type { CommandExecute, CommandMeta } from "@/types/command";
 import type { InlineKeyboardButton } from "node-telegram-bot-api";
 
 export const execute: CommandExecute = async (message) => {

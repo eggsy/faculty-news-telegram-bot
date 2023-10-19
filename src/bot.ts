@@ -3,7 +3,7 @@ import { readdirSync } from "fs";
 import { join } from "path";
 
 // Types
-import { CommandExecute, Command } from "@/@types/command";
+import { CommandExecute, Command } from "@/types/command";
 
 // Handlers
 import { messageHandler } from "@/events/message";
@@ -48,4 +48,5 @@ for (const file of files) {
 bot.setMyCommands(botCommands);
 
 bot.on("message", messageHandler);
+bot.on("edited_message_text", messageHandler);
 bot.on("callback_query", callbackQueryHandler);
