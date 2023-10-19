@@ -12,9 +12,10 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "outDir": "dist",
-    "typeRoots": ["src/@types", "node_modules/@types"],
+    "typeRoots": ["src/types", "node_modules/@types"],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@axios": ["src/plugins/axios"]
     }
   },
   "include": ["/**/*.ts"],

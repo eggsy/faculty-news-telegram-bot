@@ -1,9 +1,9 @@
-import axios from "axios";
+import axios from "@axios";
 import parse from "node-html-parser";
 import { Agent } from "https";
 
 // Types
-import type { IEvent } from "@/@types/events";
+import type { IEvent } from "@/types/events";
 
 const PAGE_URL = "https://www.alparslan.edu.tr/tr/page/event";
 

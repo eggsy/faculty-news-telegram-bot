@@ -1,10 +1,10 @@
 import { bot } from "@/bot";
 import { parse as parseDate } from "date-fns";
 import parse from "node-html-parser";
-import axios from "axios";
+import axios from "@axios";
 
 // Types
-import { CommandExecute, CommandMeta } from "@/@types/command";
+import { CommandExecute, CommandMeta } from "@/types/command";
 
 const PAGE_URL = "http://hesap.alparslan.edu.tr//hesap.aspx";
 
@@ -28,9 +28,9 @@ export const execute: CommandExecute = async (message) => {
     "✨ Bakiyeniz sorgulanırken lütfen bekleyin..."
   );
 
-  const initialPage = await axios.get(PAGE_URL).catch(null);
+  const initialPage = await axios.get(PAGE_URL).catch(() => null);
 
-  if (initialPage.status !== 200)
+  if (!initialPage || initialPage.status !== 200)
     return bot.editMessageText(
       "❌ Bir hata oluştu. Lütfen daha sonra tekrar deneyiniz.",
       {
@@ -63,9 +63,9 @@ export const execute: CommandExecute = async (message) => {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     })
-    .catch(null);
+    .catch(() => null);
 
-  if (balancePage.status !== 200)
+  if (!balancePage || balancePage.status !== 200)
     return bot.sendMessage(
       message.chat.id,
       "❌ Bir hata oluştu. Lütfen daha sonra tekrar deneyiniz."
@@ -160,6 +160,6 @@ export const execute: CommandExecute = async (message) => {
 };
 
 export const meta: CommandMeta = {
-  command: "bakiye",
+  command: ["bakiye", "b"],
   description: "Kart bakiyenizi gösterir",
 };

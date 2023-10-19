@@ -13,11 +13,17 @@ loadEnv();
 const fetchContent = async () => {
   consola.info("[CRON] Fetching news, announcements and events...");
 
-  const news = await fetchNews();
-  const announcemenets = await fetchAnnouncements();
-  const events = await fetchEvents();
+  try {
+    const news = await fetchNews();
+    const announcemenets = await fetchAnnouncements();
+    const events = await fetchEvents();
 
-  await compareFiles([...news, ...announcemenets], events);
+    await compareFiles([...news, ...announcemenets], events);
+  } catch (_) {
+    consola.error(
+      "[CRON] An error occured while fetching news, announcements and events."
+    );
+  }
 };
 
 const init = () => {
