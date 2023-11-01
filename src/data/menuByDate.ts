@@ -227,6 +227,229 @@ export const menuByDate: IMenu[] = [
       ],
     },
   ],
+  /* November */
+  ...[
+    {
+      date: "01.11.2023",
+      menu: [
+        "Etli Nohut (330 kal)",
+        "Tavuk Şinitzel/Garnitür (380 kal)",
+        "Mısırlı Pirinç Pilavı (300 kal)",
+        "Tel Şehriye Çorbası (150 kal)",
+        "Turşu",
+      ],
+    },
+    {
+      date: "02.11.2023",
+      menu: [
+        "Yoğurtlu Kayseri Mantısı (350 kal)",
+        "Tavuk But/Garnitür (350 kal)",
+        "Bulgur Pilavı (230 kal)",
+        "Tarhana Çorbası (120 kal)",
+        "İrmik Helvası (230 kal)",
+      ],
+    },
+    {
+      date: "03.11.2023",
+      menu: [
+        "Et Sote (340 kal)",
+        "Tavuk Kapama (340 kal)",
+        "Pirinç Pilavı (300 kal)",
+        "Yeşil Mercimekli Kesme Çorbası (Muş Yöresi Yemeği) (180 kal)",
+        "Ayran (80 kal)",
+      ],
+    },
+    {
+      date: "06.11.2023",
+      menu: [
+        "Tas Kebabı (320 kal)",
+        "Tavuk Kavurma (310 kal)",
+        "Pirinç Pilavı (300 kal)",
+        "Ezogelin Çorbası (140 kal)",
+        "Meyve (90 kal)",
+      ],
+    },
+    {
+      date: "07.11.2023",
+      menu: [
+        "Çoban Kavurma (340 kal)",
+        "Tavuk Kanat (300 kal)",
+        "Sebzeli Bulgur Pilavı (230 kal)",
+        "Domates Çorbası (120 kal)",
+        "Kemal Paşa Tatlısı (340 kal)",
+      ],
+    },
+    {
+      date: "08.11.2023",
+      menu: [
+        "Etli Kuru Fasulye (330 kal)",
+        "Tavuk Fajita (300 kal)",
+        "Pirinç Pilavı (310 kal)",
+        "Lebeniye Çorbası (140 kal)",
+        "Turşu",
+      ],
+    },
+    {
+      date: "09.11.2023",
+      menu: [
+        "İzmir Köfte (320 kal)",
+        "Tavuk Baget (310 kal)",
+        "Soslu Makarna (240 kal)",
+        "Analı Kızlı Çorbası (170 kal)",
+        "Mevsim Salata",
+      ],
+    },
+    {
+      date: "10.11.2023",
+      menu: [
+        "Etli Güveç (320 kal)",
+        "Tavuk Döner (270 kal)",
+        "Şehriyeli Pirinç Pilavı (310 kal)",
+        "Mercimek Çorbası (120 kal)",
+        "Cacık (50 kal)",
+      ],
+    },
+    {
+      date: "13.11.2023",
+      menu: [
+        "Yoğurtlu Kayseri Mantısı (350 kal) ",
+        "Tavuk Kanat (300 kal)",
+        "Mısırlı Bulgur Pilavı (230 kal)",
+        "Lebeniye Çorbası (140 kal)",
+        "Meyve (90 kal)",
+      ],
+    },
+    {
+      date: "14.11.2023",
+      menu: [
+        "Misket Köfte (260 kal)",
+        "Köri Soslu Tavuk Sote (280 kal)",
+        "Soslu Makarna (240kal)",
+        "Ezogelin Çorbası (140 kal)",
+        "Tulumba Tatlısı (300 kal)",
+      ],
+    },
+    {
+      date: "15.11.2023",
+      menu: [
+        "Çoban Kavurma (340 kal)",
+        "Tavuk Pirzola (320 kal)",
+        "Şehriyeli Pirinç Pilavı (300 kal)",
+        "Mercimek Çorbası (120 kal)",
+        "Ayran (80 kal)",
+      ],
+    },
+    {
+      date: "16.11.2023",
+      menu: [
+        "Etli Kuru Fasulye (330 kal)",
+        "Tavuk Kavurma (310 kal)",
+        "Bulgur Pilavı (230 kal)",
+        "Sultan Çorbası (150 kal)",
+        "Turşu",
+      ],
+    },
+    {
+      date: "17.11.2023",
+      menu: [
+        "Elbasan Tava (320 kal)",
+        "Fırında Tavuk Baget (310 kal)",
+        "Nohutlu Pirinç Pilavı (300 kal)",
+        "Tandır Çorbası (180 kal)",
+        "Mevsim Salata",
+      ],
+    },
+    {
+      date: "20.11.2023",
+      menu: [
+        "Etli Nohut (330 kal)",
+        "Tavuk Kapama (340 kal)",
+        "Bulgur Pilavı (230 kal)",
+        "Tarhana Çorbası (120 kal) ",
+        "Kemal Paşa Tatlısı (340 kal)",
+      ],
+    },
+    {
+      date: "21.11.2023",
+      menu: [
+        "Bahçıvan Kebabı (320 kal)",
+        "Tavuk Dalyan (250 kal)",
+        "Şehriyeli Pirinç Pilavı (300 kal)",
+        "Analı Kızlı Çorbası (170 kal)",
+        "Ayran (80 kal)",
+      ],
+    },
+    {
+      date: "22.11.2023",
+      menu: [
+        "Fırın Köfte (320 kal)",
+        "Tavuk Baget (310 kal)",
+        "Soslu Spagetti (240 kal)",
+        "Ezogelin Çorbası (140 kal)",
+        "Keşkül (160 kal) ",
+      ],
+    },
+    {
+      date: "23.11.2023",
+      menu: [
+        "Yoğurtlu Kayseri Mantısı (350 kal)",
+        "Tavuk Kanat (300 kal)",
+        "Bulgur Pilavı (230 kal)",
+        "Lebeniye Çorbası (140 kal)",
+        "Mevsim Salata",
+      ],
+    },
+    {
+      date: "24.11.2023",
+      menu: [
+        "Et Döner (400 kal)",
+        "Tavuk Sote (250 kal)",
+        "Pirinç Pilavı (300 kal)",
+        "Ayran Aşı Çorbası (Muş Yöresi Yemeği) (190 kal)",
+        "Meyve (90 kal)",
+      ],
+    },
+    {
+      date: "27.11.2023",
+      menu: [
+        "Çoban Kavurma (340 kal)",
+        "Tavuk Haşlama (210 kal)",
+        "Nohutlu Pirinç Pilavı (250 kal)",
+        "Mercimek Çorbası (120 kal)",
+        "Meyve (90 kal) ",
+      ],
+    },
+    {
+      date: "28.11.2023",
+      menu: [
+        "Etli Biber Dolma (330 kal)",
+        "Tavuk Pirzola (320 kal)",
+        "Soslu Makarna (240 kal)",
+        "Domates Çorbası (80 kal)",
+        "İrmik Helvası (230 kal)",
+      ],
+    },
+    {
+      date: "29.11.2023",
+      menu: [
+        "Etli Kuru Fasulye (330 kal)",
+        "Tavuk Fajita (300 kal)",
+        "Bulgur Pilavı (230 kal) ",
+        "Sultan Çorbası (150 kal) ",
+        "Turşu",
+      ],
+    },
+    {
+      date: "30.11.2023",
+      menu: [
+        "Kasap Köfte (340 kal)",
+        "Tavuk Kanat (300 kal)",
+        "Pirinç Pilavı (300 kal)",
+        "Ezogelin Çorbası (140 kal)",
+        "Mevsim Salata",
+      ],
+    },
+  ],
 ];
 
 export default menuByDate;
