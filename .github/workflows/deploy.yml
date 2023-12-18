@@ -21,4 +21,4 @@ jobs:
             git pull
             pnpm install
             pnpm build
-            pm2 restart faculty-bot
+            pm2 restart faculty-bot -s
