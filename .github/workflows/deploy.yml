@@ -18,6 +18,7 @@ jobs:
           port: 22
           script: |
             cd ~/Projects/faculty-news-telegram-bot
-            git pull origin master
+            git pull
             pnpm install
+            pnpm build
             pm2 restart faculty-bot
