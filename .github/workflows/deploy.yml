@@ -19,9 +19,6 @@ jobs:
           script: |
             cd ~/Projects/faculty-news-telegram-bot
             git pull
-
-            source /home/${{ secrets.USERNAME }}/.profile
-
             pnpm install
             pnpm build
             pm2 restart faculty-bot
