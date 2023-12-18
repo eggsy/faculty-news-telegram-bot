@@ -5,7 +5,7 @@ import type { NewsOrAnnouncements } from "@/types/news";
 import type { IEvent } from "@/types/events";
 
 // Functions
-import { updateCloudRecords } from "@/functions/updateCloudRecords";
+import { updateLocalRecords } from "@/functions/updateLocalRecords";
 import { getNewsState } from "@/functions/getNewsState";
 import {
   sendForApproval,
@@ -44,7 +44,7 @@ export const compareFiles = async (
       `[COMPARE] Found ${newEvents.length} events, updating the DB and posting for approval.`
     );
 
-  await updateCloudRecords(news, events);
+  await updateLocalRecords(news, events);
 
   for (const item of newNews) {
     sendForApproval(

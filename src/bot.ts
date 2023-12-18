@@ -1,5 +1,6 @@
 import TelegramBot from "node-telegram-bot-api";
 import { readdirSync } from "fs";
+import { config as loadEnv } from "dotenv";
 import { join } from "path";
 
 // Types
@@ -8,6 +9,8 @@ import { CommandExecute, Command } from "@/types/command";
 // Handlers
 import { messageHandler } from "@/events/message";
 import { callbackQueryHandler } from "@/events/callbackQuery";
+
+loadEnv();
 
 const token =
   process.env.NODE_ENV === "production"

@@ -1,6 +1,8 @@
 import { config as loadEnv } from "dotenv";
 import consola from "consola";
 import { schedule } from "node-cron";
+import { existsSync, mkdirSync, writeFileSync } from "fs";
+import { join } from "path";
 
 // Functions
 import { fetchAnnouncements } from "@/functions/fetchAnnouncements";
@@ -20,6 +22,7 @@ const fetchContent = async () => {
 
     await compareFiles([...news, ...announcemenets], events);
   } catch (_) {
+    console.error(_);
     consola.error(
       "[CRON] An error occured while fetching news, announcements and events."
     );
@@ -27,6 +30,19 @@ const fetchContent = async () => {
 };
 
 const init = () => {
+  if (!existsSync(join(process.cwd(), "./cache"))) {
+    consola.info("[INIT] Creating cache folder...");
+    mkdirSync(join(process.cwd(), "./cache"));
+  }
+
+  if (!existsSync(join(process.cwd(), "./cache", "./maun-news.json"))) {
+    consola.info("[INIT] Creating maun-news.json file...");
+    writeFileSync(
+      join(process.cwd(), "./cache", "./maun-news.json"),
+      JSON.stringify({ news: [], events: [] })
+    );
+  }
+
   fetchContent().catch(consola.error);
   schedule("*/30 * * * *", fetchContent);
 };

@@ -6,7 +6,6 @@
     "start": "cross-env NODE_ENV=production node ./dist/main.js"
   },
   "dependencies": {
-    "@onehop/js": "1.38.0",
     "axios": "^1.5.1",
     "consola": "^3.2.3",
     "date-fns": "^2.30.0",
