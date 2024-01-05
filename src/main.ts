@@ -43,6 +43,9 @@ const init = () => {
     );
   }
 
+  // Only fetch content in production
+  if (process.env.NODE_ENV !== "production") return;
+
   fetchContent().catch(consola.error);
   schedule("*/30 * * * *", fetchContent);
 };
