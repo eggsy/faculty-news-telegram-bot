@@ -68,6 +68,33 @@ export const execute: CommandExecute = async (message) => {
     });
   }
 
+  if (initialButtons.length === 0 && closestDaysToTomorrow.length === 0) {
+    return await bot.sendMessage(
+      message.chat.id,
+      `📅 Bu ayın yemek menüsü henüz sisteme girilmemiş, lütfen daha sonra tekrar deneyin veya her ay otomatik güncelleme desteği olan MAUN Mobil'i indirin.`,
+      {
+        parse_mode: "Markdown",
+        disable_notification: true,
+        reply_markup: {
+          inline_keyboard: [
+            [
+              {
+                text: "📱 iOS",
+                url: "https://apps.apple.com/app/maun-mobile/id6473739177",
+              },
+            ],
+            [
+              {
+                text: "📱 Android",
+                url: "https://play.google.com/store/apps/details?id=com.maun.mobile",
+              },
+            ],
+          ],
+        },
+      }
+    );
+  }
+
   await bot.sendMessage(
     message.chat.id,
     `📅 Hangi günün yemek menüsüne bakmak istersiniz?`,
