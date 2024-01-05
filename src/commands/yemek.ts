@@ -69,7 +69,7 @@ export const execute: CommandExecute = async (message) => {
   }
 
   if (initialButtons.length === 0 && closestDaysToTomorrow.length === 0) {
-    return await bot.sendMessage(
+    await bot.sendMessage(
       message.chat.id,
       `📅 Bu ayın yemek menüsü henüz sisteme girilmemiş, lütfen daha sonra tekrar deneyin veya her ay otomatik güncelleme desteği olan MAUN Mobil'i indirin.`,
       {
@@ -93,6 +93,8 @@ export const execute: CommandExecute = async (message) => {
         },
       }
     );
+
+    return;
   }
 
   await bot.sendMessage(
